@@ -1,0 +1,49 @@
+{
+  "name": "jane-vscode-extension",
+  "displayName": "Jane",
+  "description": "Jane - The jewel in your ear for VS Code",
+  "version": "0.0.1",
+  "publisher": "jaredlikes",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jane.helloWorld",
+        "title": "Jane: Hello World"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "jane-view",
+          "title": "Jane",
+          "icon": "assets/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "jane-view": [
+        {
+          "id": "jane-chat",
+          "name": "Jane Chat"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "eslint": "^8.57.0"
+  }
+}
